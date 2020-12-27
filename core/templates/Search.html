@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 {% load crispy_forms_tags %}
 {% block title %} Bla
-nk Page {% endblock %}
+nk Page {% endblock %} 
 
 <!-- Element injected in the BODY element -->
 {% block body_class %}  sidebar-mini sidebar-collapse {% endblock body_class %}
@@ -39,13 +39,13 @@ nk Page {% endblock %}
 
 {% endblock stylesheets %}
 
-{% block content %}
+{% block content %}  
 
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
-        <h2 class="text-center display-4">Search </h2>
+        <h2 class="text-center display-4">Search</h2>
       </div>
     </section>
 
@@ -63,14 +63,14 @@ nk Page {% endblock %}
                                   {% for Patients in Patients %}
                                   <option value= "{{Patients.PatientName}}">{{Patients.PatientName}}</option>
                                   {% endfor %}
-
+                  
                   </select>
                             <div class="input-group-append">
-                                <button type="submit" class="btn btn-lg btn-default" name="submit" value="Search">
+                                <button type="submit" class="btn btn-lg btn-default" name="submit" value="Search"> 
                                     <i class="fa fa-search"></i>
                                 </button>
                             </div>
-                        </div>
+                        </div> 
                          <div class="card-body">
              {% comment %} <div class="row">
               <div class="col-md-12">
@@ -81,8 +81,8 @@ nk Page {% endblock %}
                     {% for Patients in Patients %}
                     <option value= "{{Patients.PatientName}}">{{Patients.PatientName}}</option>
                     {% endfor %}
-
-                  </select>
+                  
+                  </select> 
  <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div> {% endcomment %}
@@ -102,7 +102,7 @@ nk Page {% endblock %}
                                         <div class="float-right"></div>
                                         <h3>Results for <b>{{ request.GET.q }}</b></h3>
                                         {% comment %} <p class="mb-0">consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p> {% endcomment %}
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -128,27 +128,27 @@ nk Page {% endblock %}
                                 </thead>
                                 <tbody>
                                 {% for result in results %}
-
+                                
                                 <tr>
                                   <td>{{ result.PatientName }} {{ result.PatientSecondName }} {{ result.PatientSecondName }}</td>
                                   <td>{{ result.PatientSecondName }} </td>
                                   <td>{{ result.PatientThirdName }} </td>
-                                  <td>{{ result.Gender }}</td>
+                                  <td>{{ result.Gender }}</td> 
                                   <td>{{ result.Area }}</td>
                                   <td>{{ result.PatientMobile1 }}</td>
                                   <td>
                                    <div>
-                                        <a class="btn btn-warning" href="{% url 'Patient-detail' result.id %}" target="_blank">Detail</a>
+                                        <a class="btn btn-warning" href="{% url 'Patient-detail' result.id %}" target="_blank">Detail</a> 
                                         {% comment %} <a class="btn btn-warning" href="{% url 'items-list' result.id %}" target="_blank">pos</a> {% endcomment %}
-                                        <a class="btn btn-warning" href="{% url 'items-list2' result.id %}" target="_blank">sale</a>
-                                        <a class="btn btn-warning" href="{% url 'cashbalance' result.id %}" target="_blank">cash </a>
-                                        <a class="btn btn-warning" href="{% url 'ballsbalance' result.id %}" target="_blank">balls</a>
+                                        <a class="btn btn-warning" href="{% url 'items-list2' result.id %}" target="_blank">sale</a> 
+                                        <a class="btn btn-warning" href="{% url 'cashbalance' result.id %}" target="_blank">cash </a> 
+                                        <a class="btn btn-warning" href="{% url 'ballsbalance' result.id %}" target="_blank">balls</a> 
                                         </div>
-                                  </td>
+                                  </td>      
                   {% endfor %}
                    </tfoot>
                 </table>
-
+                
                                         {% else %}
                                         No search results for this query
                                         {% endif %}
@@ -159,14 +159,14 @@ nk Page {% endblock %}
                                 </div>
                                 <div class="col px-4">
                                     <div>
-
+                                     
                                         <div class="float-right">{{ result.Birtdate }}</div>
                                         <div>
-                                        <a class="btn btn-warning" href="{% url 'Patient-detail' result.id %}"">Detail</a>
+                                        <a class="btn btn-warning" href="{% url 'Patient-detail' result.id %}"">Detail</a> 
                                         <a class="btn btn-warning" href="{% url 'items-list' result.id %}"">pos</a>
-                                        <a class="btn btn-warning" href="{% url 'items-list2' result.id %}"">pos2</a>
+                                        <a class="btn btn-warning" href="{% url 'items-list2' result.id %}"">pos2</a> 
                                         </div>
-
+                                       
                                         <h3 >{{ result.PatientName }}</h3>
                                         <h6>{{ result.Gender }}<h6>
                                         <h6>{{ result.Active }}<h6>
@@ -182,7 +182,7 @@ nk Page {% endblock %}
                                 </div> {% endcomment %}
                             </div>
                         </div>
-
+                        
                     </div>
                 </div>
             </div>
@@ -190,7 +190,7 @@ nk Page {% endblock %}
     </section>
   </div>
 
-
+   
 
 {% endblock content %}
 
